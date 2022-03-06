@@ -82,7 +82,8 @@ namespace Data_Structures
 				peek();
 				pop();
 			}
-			//this.top=null;
+            //this.top=null;
+ 
 		}
 	}
 }
