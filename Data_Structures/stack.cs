@@ -42,6 +42,48 @@ namespace Data_Structures
 
 			}
 		}
+
+		public bool isEmpty()
+		{
+			return top == null;
+		}
+
+		internal int peek()
+		{
+			// check for empty stack
+			if (!isEmpty())
+			{
+				return top.data;
+			}
+			else
+			{
+				Console.WriteLine("Stack is empty");
+				return -1;
+			}
+		}
+
+		internal void pop() // remove at the beginning
+		{
+			// check for stack underflow
+			if (top == null)
+			{
+                Console.WriteLine("\nStack Underflow");
+				return;
+			}
+
+			// update the top pointer to point to the next node
+			top = (top).next;
+		}
+
+		internal void IsEmpty()
+		{
+			while (this.top != null)
+			{
+				peek();
+				pop();
+			}
+			//this.top=null;
+		}
 	}
 }
 
